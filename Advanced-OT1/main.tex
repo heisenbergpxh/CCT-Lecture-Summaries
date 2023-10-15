@@ -1,0 +1,93 @@
+\input{General/Preamble.tex}
+\newcommand{\pKa}{\mathrm{pK}_a}
+\addbibresource{References/references.bib}
+\begin{document}
+
+% -------- only change entries beginning here ----------------------------
+%
+% choose language of coverpage: german or english
+\newif\ifeng
+\engtrue
+%\engfalse
+
+% If you want colored links, hyperref must be changed in the preamble
+% If the names for the following entries are too long, break them into several
+% lines using \\
+%
+% enter the title 
+\def\title{VL - Advanced Organic Technology I}
+%
+% enter studentid
+\def\id{11802845 \\ 11816060}
+% enter your mail
+\def\mail{k11802845@students.jku.at \\ k11816060@students.jku.at}
+%
+\def\study{Script}
+%\def\study{Electrochemistry Laboratory}
+%
+% enter your name
+\def\name{Diana Drachsler}
+%
+% for the german version you also have to enter the sex (male or female)
+\newif\ifsupvismale
+\supvismaletrue
+%\supvismalefalse
+%
+% enter course name
+\def\course{317.014}
+%
+% enter month year or \today for the today's date
+\def\date{\today}
+
+\def\protocoldate{\today}
+
+\def\students{Fabian Hofmann}
+\graphicspath{{Figures/}}
+
+\input{General/Titlepage.tex}
+\setstretch{1.5}
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%% Header Config %%%%%%%%%%%%%%%%%%%%%
+
+\pagestyle{fancy}
+\setlength\headheight{2.4cm}
+\lhead{}
+\rhead{\includegraphics[scale=0.15]{jku_en.pdf}}
+\lfoot{\today}
+\cfoot{Advanced Organic Technology I}
+\rfoot{\thepage /\pageref*{LastPage}}
+
+%%%%%%%%%%%%%%%%%%%%% Introduction %%%%%%%%%%%%%%%%%%%%%
+
+%\tableofcontents
+%\listoffigures
+%\listoftables
+%%%
+%\section*{List of Symbols}
+%%
+%\begin{tabularx}{\linewidth}{XXX}
+%      $S_{ymbol}$ & unit & description\\
+%    \end{tabularx}
+%\newpage
+
+\section{Preface}
+I would like to thank Dominik Böhm for the very detailed summary of the lecture material including the incorporation of the additional information from the lecture.
+I have made it my task to digitise the 101 pages of the handwritten summary including all illustrations.
+This will make it easier for students in future years to incorporate changes in the lecture content.
+The \LaTeX~script can be downloaded from my GitHub page.
+I wish everyone good luck with the IMHTA exam.
+
+\vspace{0.5cm}
+
+Fabian Hofmann
+%---------------------------------------------------------------%
+\input{Sections/refinery_and_fuels}
+%---------------------------------------------------------------%
+
+\printbibliography
+
+%\input{appendix}
+
+\end{document}

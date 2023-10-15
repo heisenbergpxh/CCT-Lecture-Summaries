@@ -1,0 +1,67 @@
+\documentclass[11pt,a4paper]{article}
+
+
+
+
+\usepackage{amsmath, bm, fancyhdr, graphicx, environ, chemformula, tabu, multirow, booktabs, pgfplots, blindtext, xcolor, indentfirst, lastpage, pgfplotstable, datatool, float, setspace, textgreek, makecell, newfloat, tabu, csquotes, subcaption, threeparttable}
+
+\usepackage{tabularx}
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+\newcolumntype{Z}{>{\raggedright\arraybackslash}X}
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+
+\usepackage[image={scale=0.75}]{chemschemex}
+
+\usepackage{siunitx}
+\sisetup{detect-all, round-pad = false, round-mode=places, round-precision=4}
+\DeclareSIUnit[quantity-product = {}]\calorie{cal}
+\usetikzlibrary{shapes.geometric, arrows, calc}
+\pgfplotsset{compat=1.18}
+
+
+\newcommand{\SIvar}[3][]{%
+\DTLgetvalueforkey{\sitemp}{thevalue}{python_variables}{thekey}{#2}%
+\SI[#1]{\sitemp}{#3}}
+
+\newcommand{\NumVar}[1]{%
+\DTLgetvalueforkey{\sitemp}{thevalue}{python_variables}{thekey}{#1}%
+\num{\sitemp}}
+
+\newcommand{\Var}[1]{%
+\DTLgetvalueforkey{\sitemp}{thevalue}{python_variables}{thekey}{#1}%
+\sitemp}
+
+\usepackage[hidelinks]{hyperref}
+\usepackage[english]{babel}
+\usepackage[super]{nth}
+\usepackage[backend=biber, style=chem-angew, articletitle=true]{biblatex}
+\renewbibmacro*{date}{\printtext[parens]{\printtext[date]{\printdate}}}
+\DeclareFieldFormat[article]{title}{#1}
+\DeclareFieldFormat[article]{volume}{#1}
+\AtEveryBibitem{%
+  \clearfield{note}%
+}
+
+\usepackage[labelfont=bf]{caption}
+\captionsetup{labelsep=period, font={stretch=1.5, footnotesize}, justification=justified, singlelinecheck=false} 
+
+\textwidth 16cm
+\textheight 24cm
+\topmargin -2.7cm
+\oddsidemargin 0.25cm
+\parindent 0pt
+
+\newcommand{\mean}[1]{\langle #1 \rangle}
+
+\newcommand{\tabitem}{~~\llap{\textbullet}~~}
+
+\DeclareFloatingEnvironment[
+  fileext = los ,
+  listname = {List of Schemes} ,
+  name = Scheme
+]{scheme}
+
+\setcellgapes{2.5pt}
+
+\widowpenalty10000
+\clubpenalty10000

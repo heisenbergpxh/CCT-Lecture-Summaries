@@ -1,0 +1,59 @@
+
+
+% do not change anything below this line
+% -------------------------------------------------------------------------------
+%
+\pagestyle{empty}
+
+\makeatletter
+\def\Huge{\@setfontsize\Huge{25pt}{30}}
+\makeatother
+%
+\unitlength 1cm
+%\sffamily
+\begin{picture}(16.7,0)
+\ifeng
+ \put(11.5,-2.5){\includegraphics[width=5.2cm]{jku_en}}
+\else
+ \put(11.5,-2.5){\includegraphics[width=5.2cm]{jku_de}}
+\fi
+\put(11.9,-4.2){\begin{minipage}[t]{3.9cm}\footnotesize%
+\ifeng
+ Written by\\
+\else
+ Verfasst von\\
+\fi
+{\bfseries\name}%
+ \vskip 4mm%
+ \ifeng
+  Course\\
+ \else
+  Kurs\\
+ \fi
+ {\raggedright\bfseries\course}%
+\vskip 4mm
+ Date\\
+{\bfseries\date}
+
+\end{minipage}}
+\put(12.9,-25){\begin{minipage}[t]{3.9cm}\footnotesize%
+{\bfseries JOHANNES KEPLER\\
+\ifeng
+ UNIVERSITY
+\else
+ UNIVERSIT\"AT
+\fi
+LINZ}\\
+Altenbergerstra{\ss}e 69\\
+4040 Linz, \"Osterreich\\
+www.jku.at\\
+DVR 0093696
+\end{minipage}}
+\put(0,-12.2){\begin{minipage}[b]{11cm}\raggedright\Huge\bfseries\title\end{minipage}}
+\put(0,-17.2){\includegraphics[width=4.4cm]{arr}}
+\put(0,-18.3){\begin{minipage}[t]{12cm}%
+{\Large\study}
+\vskip 4mm
+Editor: {\students}
+\end{minipage}}
+\end{picture}
